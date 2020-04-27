@@ -1,29 +1,41 @@
 // jshint esversion: 6
-
-let revWords1 = str => {
+//req 3a
+let revWord = str => {
+  let array = str.split("");
   let result = "";
-  for (var i = 0; i < str.length; i++) {
-    result = str[i] + result;
+  for (char of array) {
+    result = char + result;
+  }
+  return result;
+};
+
+let revWords1 = sent => {
+  let arr = sent.split(" ");
+  let result = "";
+  for (var i = 0; i < sent.length; i++) {
+    revWord(arr[i]);
   }
   return result;
 };
 console.log(revWords1("Web app dev"));
 
-let revWords2 = str => {
-  let arr = str.split("");
+//req 3b
+let revWords2 = sent => {
+  let arr = sent.split(" ");
   let result = "";
   arr.forEach(char => {
-    result = char + result;
+    revWord(arr[i]);
   });
   return result;
 };
 console.log(revWords2("Web app dev"));
 
-let revWords3 = str => {
-  let arr = str.split("");
+//req 3c
+let revWords3 = sent => {
+  let arr = sent.split(" ");
   let result = "";
   for (char of arr) {
-    result = char + result;
+    revWord(arr[i]);
   }
   return result;
 };
